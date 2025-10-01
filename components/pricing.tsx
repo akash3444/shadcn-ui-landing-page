@@ -53,7 +53,7 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <div id="pricing" className="max-w-screen-lg mx-auto py-12 xs:py-20 px-6">
+    <div id="pricing" className="max-w-(--breakpoint-lg) mx-auto py-12 xs:py-20 px-6">
       <h1 className="text-4xl xs:text-5xl font-bold text-center tracking-tight">
         Pricing
       </h1>
@@ -64,7 +64,7 @@ const Pricing = () => {
             className={cn(
               "relative bg-accent/50 border p-7 rounded-xl lg:rounded-none lg:first:rounded-l-xl lg:last:rounded-r-xl",
               {
-                "bg-background border-[2px] border-primary py-12 !rounded-xl":
+                "bg-background border-[2px] border-primary py-12 rounded-xl!":
                   plan.isPopular,
               }
             )}
