@@ -5,7 +5,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { VisuallyHidden as VisuallyHiddenPrimitive } from "radix-ui";
 import { Menu } from "lucide-react";
 import { Logo } from "./logo";
 import { NavMenu } from "./nav-menu";
@@ -13,9 +13,9 @@ import { NavMenu } from "./nav-menu";
 export const NavigationSheet = () => {
   return (
     <Sheet>
-      <VisuallyHidden>
+      <VisuallyHiddenPrimitive.Root>
         <SheetTitle>Navigation Drawer</SheetTitle>
-      </VisuallyHidden>
+      </VisuallyHiddenPrimitive.Root>
       <SheetTrigger asChild>
         <Button variant="outline" size="icon">
           <Menu />
