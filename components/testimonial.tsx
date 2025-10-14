@@ -15,65 +15,31 @@ import { useEffect, useState } from "react";
 const testimonials = [
   {
     id: 1,
-    name: "John Doe",
-    designation: "Software Engineer",
-    company: "TechCorp",
+    name: "Marcus P.",
+    location: "",
     testimonial:
-      "This product has completely transformed the way we work. The efficiency and ease of use are unmatched! " +
-      "We were struggling with productivity before, but this tool has streamlined our entire process. ",
-    avatar: "https://randomuser.me/api/portraits/men/1.jpg",
+      "Smokeez always has the fresh drop of Delta 8 carts and the team never hesitates to walk me through what's new. It feels like catching up with friends every time I stop in.",
   },
   {
     id: 2,
-    name: "Jane Smith",
-    designation: "Product Manager",
-    company: "InnovateX",
+    name: "Alana G.",
+    location: "",
     testimonial:
-      "An amazing tool that simplifies complex tasks. Highly recommended for professionals in the industry. " +
-      "The intuitive interface makes it easy to onboard new team members, and the automation features save us countless hours every week. ",
-    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
+      "I came in curious about CBD for sleep and left with a custom bundle that actually works. They listened, shared samples, and made the whole experience comfortable.",
   },
   {
     id: 3,
-    name: "Michael Johnson",
-    designation: "UX Designer",
-    company: "DesignPro",
+    name: "Jared L.",
+    location: "",
     testimonial:
-      "The user experience is top-notch! The interface is clean, intuitive, and easy to navigate. " +
-      "As a designer, I appreciate the attention to detail and well-thought-out UI components. " +
-      "It makes designing and prototyping so much more efficient.",
-    avatar: "https://randomuser.me/api/portraits/men/3.jpg",
+      "From hookah coals to glass upgrades, Smokeez keeps my lounge nights dialed in. The staff remember my setup and always have smart suggestions.",
   },
   {
     id: 4,
-    name: "Emily Davis",
-    designation: "Marketing Specialist",
-    company: "BrandBoost",
+    name: "Brianna T.",
+    location: "",
     testimonial:
-      "I've seen a significant improvement in our team's productivity since we started using this service. " +
-      "The ability to track performance, analyze data, and collaborate across teams has been a game-changer.",
-    avatar: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    id: 5,
-    name: "Daniel Martinez",
-    designation: "Full-Stack Developer",
-    company: "CodeCrafters",
-    testimonial:
-      "The best investment we've made! The support team is also super responsive and helpful. " +
-      "As a developer, I appreciate the well-documented API, the flexibility of integrations, and the robust security features.",
-    avatar: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    id: 6,
-    name: "Sophia Lee",
-    designation: "Data Analyst",
-    company: "InsightTech",
-    testimonial:
-      "This tool has saved me hours of work! The analytics and reporting features are incredibly powerful. " +
-      "I can now generate detailed reports in minutes, which previously took days to compile. " +
-      "helping us make smarter, data-backed decisions.",
-    avatar: "https://randomuser.me/api/portraits/women/6.jpg",
+      "I love how relaxed the vibe is here. Whether I need a quick vape swap or want to explore something new, there's zero pressure and tons of knowledge.",
   },
 ];
 const Testimonial = () => {
@@ -99,9 +65,13 @@ const Testimonial = () => {
       id="testimonials"
       className="w-full max-w-(--breakpoint-xl) mx-auto py-6 xs:py-12 px-6"
     >
-      <h2 className="mb-8 xs:mb-14 text-4xl md:text-5xl font-bold text-center tracking-tight">
-        Testimonials
+      <h2 className="mb-4 xs:mb-6 text-4xl md:text-5xl font-bold text-center tracking-tight uppercase">
+        What Locals Are Saying
       </h2>
+      <p className="mb-8 xs:mb-14 text-center text-muted-foreground max-w-2xl mx-auto">
+        Real feedback from neighbors who count on Smokeez for quality products,
+        honest guidance, and a relaxed atmosphere.
+      </p>
       <div className="container w-full mx-auto">
         <Carousel setApi={setApi}>
           <CarouselContent>
@@ -139,7 +109,7 @@ const TestimonialCard = ({
         <Image
           src="/placeholder.svg"
           fill
-          alt=""
+          alt="Smokeez interior shelves"
           className="object-cover rounded-xl"
         />
 
@@ -169,7 +139,7 @@ const TestimonialCard = ({
             </Avatar>
             <div>
               <p className="text-lg font-semibold">{testimonial.name}</p>
-              <p className="text-sm text-gray-500">{testimonial.designation}</p>
+              <p className="text-sm text-gray-500">{testimonial.location}</p>
             </div>
           </div>
           <div className="flex items-center gap-1">
@@ -191,7 +161,7 @@ const TestimonialCard = ({
           </Avatar>
           <div>
             <p className="text-lg font-semibold">{testimonial.name}</p>
-            <p className="text-sm text-gray-500">{testimonial.designation}</p>
+            <p className="text-sm text-gray-500">{testimonial.location}</p>
           </div>
         </div>
       </div>

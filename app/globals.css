@@ -96,7 +96,7 @@
   --secondary: hsl(0 0% 96.1%);
   --secondary-foreground: hsl(0 0% 9%);
   --muted: hsl(0 0% 96.1%);
-  --muted-foreground: hsl(0 0% 45.1%);
+  --muted-foreground: hsl(0 0% 50.1%);
   --accent: hsl(0 0% 96.1%);
   --accent-foreground: hsl(0 0% 9%);
   --destructive: hsl(0 84.2% 60.2%);
@@ -109,7 +109,8 @@
   --chart-3: hsl(197 37% 24%);
   --chart-4: hsl(43 74% 66%);
   --chart-5: hsl(27 87% 67%);
-  --radius: 0.5rem
+  --radius: 0.5rem;
+  --smoke-color: #000000 ;
 }
 .dark {
   --background: hsl(0 0% 3.9%);
@@ -123,7 +124,7 @@
   --secondary: hsl(0 0% 14.9%);
   --secondary-foreground: hsl(0 0% 98%);
   --muted: hsl(0 0% 14.9%);
-  --muted-foreground: hsl(0 0% 63.9%);
+  --muted-foreground: hsl(0 0% 80.9%);
   --accent: hsl(0 0% 14.9%);
   --accent-foreground: hsl(0 0% 98%);
   --destructive: hsl(0 62.8% 30.6%);
@@ -135,7 +136,8 @@
   --chart-2: hsl(160 60% 45%);
   --chart-3: hsl(30 80% 55%);
   --chart-4: hsl(280 65% 60%);
-  --chart-5: hsl(340 75% 55%)
+  --chart-5: hsl(340 75% 55%);
+  --smoke-color: #818CF8;
 }
 
 @layer base {
@@ -150,5 +152,125 @@
   }
   button {
     @apply cursor-pointer;
+  }
+}
+
+@keyframes smoke-drift {
+  0% {
+    transform: translate3d(-50%, var(--smoke-y0), 0) scale(var(--smoke-scale0));
+    opacity: var(--smoke-opacity0);
+  }
+  30% {
+    transform: translate3d(-50%, var(--smoke-y1), 0) scale(var(--smoke-scale1));
+    opacity: var(--smoke-opacity1);
+  }
+  60% {
+    transform: translate3d(-50%, var(--smoke-y2), 0) scale(var(--smoke-scale2));
+    opacity: var(--smoke-opacity2);
+  }
+  100% {
+    transform: translate3d(-50%, var(--smoke-y3), 0) scale(var(--smoke-scale3));
+    opacity: var(--smoke-opacity3);
+  }
+}
+
+@layer utilities {
+  .feature-stagger {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+    animation: feature-card-in 640ms ease-out forwards;
+    animation-delay: var(--stagger-delay, 0ms);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .feature-stagger {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .smoke-cloud {
+    --smoke-duration: 22s;
+    --smoke-delay: 0s;
+    --smoke-y0: 22%;
+    --smoke-y1: 8%;
+    --smoke-y2: -4%;
+    --smoke-y3: -16%;
+    --smoke-scale0: 0.92;
+    --smoke-scale1: 0.98;
+    --smoke-scale2: 1.04;
+    --smoke-scale3: 1.08;
+    --smoke-opacity0: 0.35;
+    --smoke-opacity1: 0.42;
+    --smoke-opacity2: 0.36;
+    --smoke-opacity3: 0.28;
+    position: absolute;
+    left: 50%;
+    bottom: -40%;
+    z-index: 0;
+    width: min(78%, 42rem);
+    height: 13rem;
+    border-radius: 9999px;
+    background: radial-gradient(circle at 50% 50%, rgba(38, 70, 83, 0.24) 0%, rgba(38, 70, 83, 0.12) 46%, rgba(38, 70, 83, 0.05) 70%, transparent 90%);
+    filter: blur(34px);
+    animation: smoke-drift var(--smoke-duration) linear var(--smoke-delay) infinite;
+    pointer-events: none;
+    mix-blend-mode: normal;
+    will-change: transform, opacity;
+  }
+
+  .smoke-cloud[data-variant="wide"] {
+    width: min(92%, 52rem);
+    height: 16rem;
+    filter: blur(46px);
+    --smoke-duration: 28s;
+    --smoke-delay: 3s;
+    --smoke-y0: 26%;
+    --smoke-y1: 10%;
+    --smoke-y2: -6%;
+    --smoke-y3: -22%;
+    --smoke-scale0: 0.9;
+    --smoke-scale1: 0.97;
+    --smoke-scale2: 1.05;
+    --smoke-scale3: 1.12;
+    --smoke-opacity0: 0.3;
+    --smoke-opacity1: 0.38;
+    --smoke-opacity2: 0.32;
+    --smoke-opacity3: 0.24;
+  }
+
+  .smoke-cloud[data-variant="narrow"] {
+    width: min(62%, 32rem);
+    height: 10rem;
+    filter: blur(26px);
+    --smoke-duration: 18s;
+    --smoke-delay: 6s;
+    --smoke-y0: 18%;
+    --smoke-y1: 6%;
+    --smoke-y2: -2%;
+    --smoke-y3: -12%;
+    --smoke-scale0: 0.94;
+    --smoke-scale1: 1.0;
+    --smoke-scale2: 1.05;
+    --smoke-scale3: 1.1;
+    --smoke-opacity0: 0.32;
+    --smoke-opacity1: 0.38;
+    --smoke-opacity2: 0.34;
+    --smoke-opacity3: 0.26;
+  }
+
+  .dark .smoke-cloud {
+    background: radial-gradient(circle at 50% 48%, rgba(129, 140, 248, 0.52) 0%, rgba(129, 140, 248, 0.21) 54%, rgba(129, 140, 248, 0.1) 78%, transparent 92%);
+    --smoke-opacity0: 0.4;
+    --smoke-opacity1: 0.46;
+    --smoke-opacity2: 0.4;
+    --smoke-opacity3: 0.3;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .smoke-cloud {
+      animation: none;
+    }
   }
 }
