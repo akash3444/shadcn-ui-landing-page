@@ -1,28 +1,23 @@
 {
-  "name": "Shadcn UI Landing Page",
-  "short_name": "Shadcn Landing Page",
+  "name": "Smokeez Virginia Beach",
+  "short_name": "Smokeez",
+  "description": "Smokeez is Virginia Beach's quality-first smoke shop, curating cannabinoids, glass, and accessories for every kind of session.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
   "icons": [
     {
-      "src": "/favicon.ico",
-      "sizes": "48x48",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "/apple-touch-icon.png",
-      "type": "image/png"
-    },
-    {
-      "src": "/android-chrome-192x192.png",
+      "src": "/icons/1.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/android-chrome-512x512.png",
+      "src": "/icons/1.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  "theme_color": "#ffffff"
 }

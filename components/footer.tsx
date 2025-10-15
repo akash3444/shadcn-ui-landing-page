@@ -2,6 +2,7 @@ import { Logo } from "@/components/navbar/logo";
 import { Separator } from "@/components/ui/separator";
 import { FacebookIcon, InstagramIcon, Mail } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const footerSections = [
   {
@@ -101,10 +102,33 @@ const Footer = () => {
       <Separator />
       <div className="max-w-(--breakpoint-xl) mx-auto py-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6">
         {/* Copyright */}
-        <span className="text-muted-foreground text-center xs:text-start">
+        
+        <div className="text-sm text-neutral-400 space-y-2">
+              <p><span className="text-muted-foreground text-center xs:text-start">
           &copy; {new Date().getFullYear()} Smokeez Smoke Shop. All rights
           reserved.
-        </span>
+        </span></p>
+
+              {/* Powered by ThinkBig */}
+              <div className="flex items-center space-x-2">
+                <span>Powered by:</span>
+                <Link
+                  href="https://www.thinkbigtechnology.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="focus:outline-none focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-black rounded-sm"
+                  aria-label="Visit ThinkBig Technology website"
+                >
+                  <Image
+                    src="/thinkbiglogo3.png"
+                    alt="ThinkBig Technology"
+                    width={180}
+                    height={45}
+                    className="object-contain opacity-60 hover:opacity-100 transition-opacity duration-200"
+                  />
+                </Link>
+              </div>
+            </div>
 
         <div className="flex items-center gap-5 text-muted-foreground">
           <Link href="#" target="_blank" aria-label="Follow Smokeez on Instagram">
