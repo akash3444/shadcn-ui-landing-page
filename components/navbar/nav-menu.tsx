@@ -4,10 +4,12 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { NavigationMenuProps } from "@radix-ui/react-navigation-menu";
+import React from "react";
+
+type NavMenuProps = React.ComponentProps<typeof NavigationMenu>;
 import Link from "next/link";
 
-export const NavMenu = (props: NavigationMenuProps) => (
+export const NavMenu = (props: NavMenuProps) => (
   <NavigationMenu {...props}>
     <NavigationMenuList className="gap-6 space-x-0 data-[orientation=vertical]:flex-col data-[orientation=vertical]:items-start">
       <NavigationMenuItem>
@@ -32,7 +34,7 @@ export const NavMenu = (props: NavigationMenuProps) => (
       </NavigationMenuItem>
       <NavigationMenuItem>
         <NavigationMenuLink asChild>
-          <Link href="#pricing">Pricing</Link>
+          <Link href="#contact">Contact Us</Link>
         </NavigationMenuLink>
       </NavigationMenuItem>
     </NavigationMenuList>

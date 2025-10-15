@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.12",
+    "@react-three/drei": "^10.7.6",
+    "@react-three/fiber": "^9.4.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.5.2",
@@ -18,8 +21,10 @@
     "radix-ui": "^1.4.3",
     "react": "19.1.1",
     "react-dom": "19.1.1",
+    "react-smoke": "^1.2.0",
     "tailwind-merge": "^3.0.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "three": "^0.180.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -27,6 +32,7 @@
     "@types/node": "^20",
     "@types/react": "19.1.16",
     "@types/react-dom": "19.1.9",
+    "@types/three": "^0.180.0",
     "eslint": "^9",
     "eslint-config-next": "15.5.4",
     "postcss": "^8",
