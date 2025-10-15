@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight, CirclePlay } from "lucide-react";
 import Image from "next/image";
 import { Smoke } from "@/components/ui/shadcn-io/smoke";
+import Link from "next/link";
 
 const heroHighlights = [
   "Delta 8",
@@ -51,15 +52,24 @@ const Hero = () => {
               <Button
                 size="lg"
                 className="w-full sm:w-auto rounded-full text-base"
+                asChild
               >
-                Explore Our Selection <ArrowUpRight className="h-5! w-5!" />
+                <Link href="#features">
+                  Explore Our Selection <ArrowUpRight className="h-5! w-5!" />
+                </Link>
               </Button>
               <Button
+                asChild
                 variant="outline"
                 size="lg"
                 className="w-full sm:w-auto rounded-full text-base shadow-none"
+                
               >
-                <CirclePlay className="h-5! w-5!" /> Visit Smokeez
+                <Link
+                  href="https://www.google.com/maps?rlz=1C1ONGR_enUS991US991&sca_esv=df783cd413716f53&lqi=CiFzbW9rZWV6IHNtb2tlIHNob3AgdmlyZ2luaWEgYmVhY2hI_r_w-fW3gIAIWj0QABABEAIYABgBGAIYAxgEIiFzbW9rZWV6IHNtb2tlIHNob3AgdmlyZ2luaWEgYmVhY2gqCAgCEAAQARACkgEMdG9iYWNjb19zaG9wqgFZCg0vZy8xMXJ5aG1zN196EAEyHxABIhsZUQTYYI-d2sZ2oqOs13TCM7J3YMZcHjMYK3oyJRACIiFzbW9rZWV6IHNtb2tlIHNob3AgdmlyZ2luaWEgYmVhY2jgAQA&phdesc=eeIa6-88Z1E&vet=12ahUKEwjWs_inu6aQAxW8nokEHdPPIXgQ8UF6BAgGEBw..i&lei=I7bvaJaWOry9ptQP05-HwQc&cs=1&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KXuOKCkxv7qJMcuIJtqA5e20&daddr=3590+Holland+Rd+Suite+109,+Virginia+Beach,+VA+23452"
+                >
+                  <CirclePlay className="h-5! w-5!" /> Visit Smokeez
+                </Link>
               </Button>
             </div>
           </div>
