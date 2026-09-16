@@ -11,7 +11,7 @@ const Hero = () => {
           <Badge className="rounded-full py-1 border-none">
             Just released v1.0.0
           </Badge>
-          <h1 className="mt-6 max-w-[20ch] text-3xl xs:text-4xl sm:text-5xl lg:text-[2.75rem] xl:text-5xl font-semibold leading-[1.2]! tracking-tight">
+          <h1 className="mt-6 max-w-[20ch] font-heading text-3xl xs:text-4xl sm:text-5xl lg:text-[2.75rem] xl:text-5xl font-semibold leading-[1.2]! tracking-[-0.045em]">
             Customized Shadcn UI Blocks & Components
           </h1>
           <p className="mt-6 max-w-[60ch] xs:text-lg">

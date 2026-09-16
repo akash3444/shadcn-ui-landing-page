@@ -53,7 +53,7 @@ const Features = () => {
       id="features"
       className="max-w-(--breakpoint-xl) mx-auto w-full py-12 xs:py-20 px-6"
     >
-      <h2 className="text-3xl xs:text-4xl md:text-5xl md:leading-[3.5rem] font-semibold tracking-tight sm:max-w-xl sm:text-center sm:mx-auto">
+      <h2 className="text-3xl xs:text-4xl font-heading md:text-[2.6rem] md:leading-[3.5rem] font-semibold tracking-[-0.045em] sm:max-w-[20ch] sm:text-center sm:mx-auto">
         Boost Your Strategy with Smart Features
       </h2>
       <div className="mt-8 xs:mt-14 w-full mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
@@ -67,7 +67,7 @@ const Features = () => {
               <h4 className="mt-3! text-xl font-semibold tracking-tight">
                 {feature.title}
               </h4>
-              <p className="mt-1 text-muted-foreground text-sm xs:text-[17px]">
+              <p className="mt-0.5 text-muted-foreground text-sm xs:text-[17px]">
                 {feature.description}
               </p>
             </CardHeader>

@@ -20,7 +20,7 @@ const testimonials = [
     company: "TechCorp",
     testimonial:
       "This product has completely transformed the way we work. The efficiency and ease of use are unmatched! " +
-      "We were struggling with productivity before, but this tool has streamlined our entire process. ",
+      "We were struggling with productivity before, but this tool has streamlined our entire process.",
     avatar: "https://randomuser.me/api/portraits/men/1.jpg",
   },
   {
@@ -30,7 +30,7 @@ const testimonials = [
     company: "InnovateX",
     testimonial:
       "An amazing tool that simplifies complex tasks. Highly recommended for professionals in the industry. " +
-      "The intuitive interface makes it easy to onboard new team members, and the automation features save us countless hours every week. ",
+      "The intuitive interface makes it easy to onboard new team members, and the automation features save us countless hours every week.",
     avatar: "https://randomuser.me/api/portraits/women/2.jpg",
   },
   {
@@ -40,7 +40,7 @@ const testimonials = [
     company: "DesignPro",
     testimonial:
       "The user experience is top-notch! The interface is clean, intuitive, and easy to navigate. " +
-      "As a designer, I appreciate the attention to detail and well-thought-out UI components. " +
+      "As a designer, I appreciate the attention to detail and well-thought-out UI components." +
       "It makes designing and prototyping so much more efficient.",
     avatar: "https://randomuser.me/api/portraits/men/3.jpg",
   },
@@ -71,7 +71,7 @@ const testimonials = [
     company: "InsightTech",
     testimonial:
       "This tool has saved me hours of work! The analytics and reporting features are incredibly powerful. " +
-      "I can now generate detailed reports in minutes, which previously took days to compile. " +
+      "I can now generate detailed reports in minutes, which previously took days to compile." +
       "helping us make smarter, data-backed decisions.",
     avatar: "https://randomuser.me/api/portraits/women/6.jpg",
   },
@@ -99,7 +99,7 @@ const Testimonial = () => {
       id="testimonials"
       className="w-full max-w-(--breakpoint-xl) mx-auto py-6 xs:py-12 px-6"
     >
-      <h2 className="mb-8 xs:mb-14 text-4xl md:text-5xl font-semibold text-center tracking-tight">
+      <h2 className="mb-8 font-heading xs:mb-14 text-4xl md:text-[2.6rem] font-semibold text-center tracking-[-0.045em]">
         Testimonials
       </h2>
       <div className="container w-full mx-auto">
@@ -180,7 +180,7 @@ const TestimonialCard = ({
             <StarIcon className="w-5 h-5 fill-muted-foreground stroke-muted-foreground" />
           </div>
         </div>
-        <p className="mt-6 text-lg sm:text-2xl lg:text-[1.75rem] xl:text-3xl leading-normal lg:leading-normal! font-semibold tracking-tight">
+        <p className="mt-6 text-lg sm:text-2xl lg:text-[1.75rem] xl:text-3xl leading-normal lg:leading-normal! font-medium tracking-tight">
           &quot;{testimonial.testimonial}&quot;
         </p>
         <div className="flex sm:hidden md:flex mt-6 items-center gap-4">
