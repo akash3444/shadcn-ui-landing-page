@@ -24,7 +24,7 @@ const Hero = () => {
               size="lg"
               className="w-full sm:w-auto rounded-full text-base"
             >
-              Get Started <ArrowUpRight className="h-5! w-5!" />
+              Get started <ArrowUpRight className="h-5! w-5!" />
             </Button>
             <Button
               variant="outline"
