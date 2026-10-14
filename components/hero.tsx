@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="max-w-(--breakpoint-xl) w-full flex flex-col lg:flex-row mx-auto items-center justify-between gap-y-14 gap-x-10 px-6 py-12 lg:py-0">
         <div className="max-w-xl">
           <Badge className="rounded-full py-1 border-none">
-            Just released v1.0.0
+            Just released v1.1.0
           </Badge>
           <h1 className="mt-6 max-w-[20ch] font-heading text-3xl xs:text-4xl sm:text-5xl lg:text-[2.75rem] xl:text-5xl font-semibold leading-[1.2]! tracking-[-0.045em]">
             Customized Shadcn UI Blocks & Components
@@ -31,7 +31,7 @@ const Hero = () => {
               size="lg"
               className="w-full sm:w-auto rounded-full text-base shadow-none"
             >
-              <CirclePlay className="h-5! w-5!" /> Watch Demo
+              <CirclePlay className="h-5! w-5!" /> Watch the demo
             </Button>
           </div>
         </div>
