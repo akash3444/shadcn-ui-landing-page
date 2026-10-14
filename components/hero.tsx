@@ -31,7 +31,7 @@ const Hero = () => {
               size="lg"
               className="w-full sm:w-auto rounded-full text-base shadow-none"
             >
-              <CirclePlay className="h-5! w-5!" /> Watch Demo
+              <CirclePlay className="h-5! w-5!" /> Watch the demo
             </Button>
           </div>
         </div>
